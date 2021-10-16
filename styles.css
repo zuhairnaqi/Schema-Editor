@@ -1,0 +1,82 @@
+.main-container {
+  min-height: 100vh;
+  background: #2e3749;
+}
+
+/* Nav Bar Styles */
+
+.navbar {
+  padding: 20px !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-heading {
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+}
+
+.fa-plus-circle {
+  margin-right: 08px;
+}
+
+#tables-container {
+  /* display: grid;
+  grid-row-gap: 100px;
+  width: 100%; */
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 0 auto;
+  /* border-radius: 10px; */
+ }
+
+/* Table Card Styles */
+
+.table-container {
+  border-radius: 10px;
+  background-color: #495467;
+  height: fit-content;
+  font-size: 0.9rem;
+  max-width: 300px;
+}
+.table-header {
+  height: 10px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #38b2ac;
+}
+.white-text {
+  color: #ffffff;
+}
+
+.table-heading {
+  text-transform: capitalize;
+  font-size: 1.0625rem;
+}
+.table-subheading {
+  font-size: 14px;
+  font-weight: 500;
+}
+.table-body {
+  padding: 12px 10px;
+  /* min height because react connect element library arrows issue */
+  min-height: 350px;
+}
+
+.field-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.field-option {
+  margin-right: 14px;
+  color: #7b7b7b;
+}
+
+.active-color {
+  color: #38b2ac;
+}
+
