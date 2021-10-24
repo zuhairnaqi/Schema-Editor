@@ -13,22 +13,23 @@
   </head>
 
 <body>
-
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+</div>
+<div class="main">
   <div class="main-container">
     <div class="navbar">
       <h4 class="navbar-heading">Schema Editor</h4>
       <button type="button" class="btn btn-outline-success">
-	<i class="fa fa-plus-circle" aria-hidden="true"></i>
-	Add Entity
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        Add Entity
       </button>
     </div>
     <!-- Table Card Here -->
-    <div id="tables-container"></div>
-
-    
+    <div id="tables-container" onclick="openNav()"></div>
   </div>
-
-
+</div>
+<script src="sidebar.js"></script>
   <script src="DUMMY_DATA.js"></script>
   <script src="index.js"></script>
 </body>
