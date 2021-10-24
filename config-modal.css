@@ -1,0 +1,66 @@
+#config-modal {
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 600ms ease-in-out;
+}
+
+#config-modal.show {
+  padding: 8px;
+  display: initial;
+  flex-flow: column;
+  height: initial;
+  opacity: 1;
+  pointer-events: initial;
+  background: #2e3749;
+  color: white;
+  right: 5px;
+  top: 208px;
+  border-radius: 5px;
+  width: 315px;
+}
+
+#config-modal.show form {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+
+#config-modal-close {
+  cursor: pointer;
+}
+
+.modal-heading {
+  display: flex;
+  gap: 8px;
+}
+
+.modal-heading h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#config-modal.show h5 {
+  font-size: 0.8rem;
+}
+
+.config-modal-input {
+  display: block;
+  background-color: #818da0;
+  border: 0;
+  border-radius: 3px;
+  width: 100%;
+  padding: 8px;
+}
+
+.config-modal-input:placeholder-shown {
+  color: #9fabbd;
+}
+
+.config-modal-input-container label {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
