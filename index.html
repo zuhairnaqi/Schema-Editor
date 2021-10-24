@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schema Editor</title>
   <link href="styles.css" rel="stylesheet" />
+  <link href="config-modal.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
@@ -16,7 +17,7 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div style="display: flex;flex-direction:row;justify-content: space-between;">
-    <h3 class="sidebarHeader">Entity Options</h3>
+    <h3 class="sidebarHeader">Entity Options</h1>
       <i class="fa fa-trash-o" style="margin-right: 30px;margin-top: 20px;margin-left:20px;font-size:20px;color:red"></i>
   </div>
   <span class="sidebarText">Category, collection: categories, Table: categories</span>
@@ -28,20 +29,20 @@
     <input class="checkbox1" type="checkbox" />
     <label class="checkboxText">Uses Soft-Deletes</label>
   </form>
-  <h3 class="sidebarHeaderFields">Fields</h3>
+  <h3 class="sidebarHeaderFields">Fields</h1>
     <form>
       <input class="sidebarFieldInput" placeholder="Field Name" type="text" />
       <select class="sidebarFieldInput">
         <option>Choose Data</option>
       </select>
       <label class="letterN">N</label>
-      <i class="fa fa-gear" style="margin-left:20px;font-size:20px;color:#38b2ac;"></i>
+      <i class="fa fa-gear" role="button" id="gear-button" style="margin-left:20px;font-size:20px;color:#38b2ac;"></i>
       <i class="fa fa-trash-o" style="margin-left:20px;font-size:20px;color:red"></i>
     </form>
     <i class="fa fa-plus-circle" style="margin-left:20px;margin-top: 20px;font-size:20px;color:#38b2ac;"></i>
     <label style="margin-left:10px;margin-top: 20px;font-size:20px;color:#38b2ac;">Add Fields</label><br />
     <hr color="grey" style="margin: 20px;" />
-    <h3 class="sidebarHeaderFields">Fields</h3>
+    <h3 class="sidebarHeaderFields">Fields</h1>
       <form>
         <select class="sidebarFieldInput">
           <option>Choose Table</option>
@@ -54,6 +55,51 @@
       <i class="fa fa-plus-circle" style="margin-left:20px;margin-top: 20px;font-size:20px;color:#38b2ac;"></i>
       <label style="margin-left:10px;margin-top: 20px;font-size:20px;color:#38b2ac;">Add Relationships</label><br />
       <button class="buttonSave">Save</button>
+
+  <div id="config-modal">
+    <form>
+      <div class="modal-heading">
+        <i class="fa fa-gear" role="button" id="config-modal-close"></i>
+        <h4>Field Options</h4>
+      </div>
+      <div>
+        <label><input type="checkbox"/> Nullable</label>
+        <label><input type="checkbox"/> Hidden</label>
+        <label><input type="checkbox"/> Fillable</label>
+      </div>
+
+      <div>
+        <h5>Indexes</h5>
+        <div>
+          <label><input type="checkbox"/> Unique</label>
+          <label><input type="checkbox"/> Index</label>
+        </div>
+      </div>
+
+      <div class="config-modal-input-container">
+        <label>Default Value</label>
+        <input class="config-modal-input" placeholder="Default Value"/>
+      </div>
+
+      <div class="config-modal-input-container">
+        <label>Faker</label>
+        <input class="config-modal-input" placeholder="Faker code"/>
+      </div>
+
+      <label><input type="checkbox"/> Primary Key</label>
+      <label><input type="checkbox"/> Foreign Key</label>
+
+      <div class="config-modal-input-container">
+        <label>Reference Table/Model</label>
+        <input class="config-modal-input" placeholder="User"/>
+      </div>
+
+      <div class="config-modal-input-container">
+        <label>Reference Field</label>
+        <input class="config-modal-input" placeholder="Reference Field"/>
+      </div>
+    </div>
+  </form>
 </div>
 
 <div class="main">
