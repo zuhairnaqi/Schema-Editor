@@ -116,6 +116,62 @@
   transition: margin-left .5s;
   padding: 20px;
 }
+.sidebarHeader {
+  color: white;
+  margin-left: 20px;
+}
+.sidebarText {
+  color: white;
+  margin-left: 20px;
+}
+.sidebarFormText {
+  color: white;
+  margin-left: 20px;
+  margin-top:40px;
+}
+.sidebarInput {
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 90%;
+  padding: 10px;
+}
+.checkbox1 {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.checkboxText {
+  margin-left: 10px;
+  color: white;
+  margin-top: 20px;
+}
+.sidebarHeaderFields {
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.sidebarFieldInput {
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 160px;
+  padding: 10px;
+}
+.letterN {
+  color: #7b7b7b;
+  margin-left: 20px;
+}
+.buttonSave {
+  border: 2px solid greenyellow;
+  border-radius: 5px;
+  background-color: transparent;
+  color: greenyellow;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding:  5px;
+  width: 70px;
+  margin-bottom: 20px;
+}
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
