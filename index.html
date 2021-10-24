@@ -35,7 +35,17 @@
         <option>Choose Data</option>
       </select>
       <label class="letterN">N</label>
-      <i class="fa fa-gear" style="margin-left:20px;font-size:20px;color:#38b2ac;"></i>
+      <div class="dropdown">
+          <i onclick="myFunction()" id="dropbtn"  class="fa fa-gear" style="margin-left:20px;font-size:20px;color:#38b2ac;"></i>
+        <div id="myDropdown" class="dropdown-content">
+          <i class="fa fa-gear" style="margin-left:10px;font-size:20px;color:white"></i>
+          <label style="margin-top: 10px;margin-left:5px;font: size 15px;color:white">Field Options</label><br/>
+          <form>
+            <input class="checkbox1" type="checkbox" />
+            <label class="checkboxText">Nullable</label>
+          </form>
+        </div>
+      </div>
       <i class="fa fa-trash-o" style="margin-left:20px;font-size:20px;color:red"></i>
     </form>
     <i class="fa fa-plus-circle" style="margin-left:20px;margin-top: 20px;font-size:20px;color:#38b2ac;"></i>
