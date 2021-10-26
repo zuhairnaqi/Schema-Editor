@@ -31,7 +31,7 @@
   padding: 40px;
   margin: 0 auto;
   /* border-radius: 10px; */
- }
+}
 
 /* Table Card Styles */
 
@@ -81,16 +81,22 @@
 }
 
 .sidenav {
-  height: 100%; 
-  width: 0; 
-  position: fixed; 
-  z-index: 1; 
-  top: 0; 
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
   background-color: #1a202d;
-  overflow-x: hidden; 
-  padding-top: 60px; 
+  overflow-x: hidden;
+  padding-top: 60px;
   transition: 0.5s;
+}
+
+#gear-button {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #38b2ac;
 }
 
 /* The navigation menu links */
@@ -113,7 +119,7 @@
   margin-left: 50px;
 }
 #main {
-  transition: margin-left .5s;
+  transition: margin-left 0.5s;
   padding: 20px;
 }
 .sidebarHeader {
@@ -127,7 +133,7 @@
 .sidebarFormText {
   color: white;
   margin-left: 20px;
-  margin-top:40px;
+  margin-top: 40px;
 }
 .sidebarInput {
   margin-left: 20px;
@@ -168,12 +174,16 @@
   color: greenyellow;
   margin-left: 20px;
   margin-top: 10px;
-  padding:  5px;
+  padding: 5px;
   width: 70px;
   margin-bottom: 20px;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
