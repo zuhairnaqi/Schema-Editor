@@ -80,6 +80,14 @@
   color: #38b2ac;
 }
 
+.overlay {
+  background: #9d9d9d55;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
