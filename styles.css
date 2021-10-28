@@ -86,11 +86,12 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #1a202d;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+  max-width: 490px;
 }
 
 #gear-button {
@@ -167,17 +168,11 @@
   color: #7b7b7b;
   margin-left: 20px;
 }
-.buttonSave {
-  border: 2px solid greenyellow;
-  border-radius: 5px;
-  background-color: transparent;
-  color: greenyellow;
-  margin-left: 20px;
-  margin-top: 10px;
-  padding: 5px;
-  width: 70px;
-  margin-bottom: 20px;
+
+.save-btn {
+  margin: 20px;
 }
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {
