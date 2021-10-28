@@ -2,16 +2,19 @@
   function renderTableCard(table) {
     const tablesContainer = document.getElementById('tables-container');
     const tableCard = `
-    <div class="table-container">
+    <div class="table-container"  onclick="openNav(event)">
       <div class="table-header"></div>
       <div class="table-body">
         <h3 class="white-text table-heading">
           ${table.schemaName}  
           <span class="table-subheading">(MODEL for ${table.tableName})</span>
         </h3>
-        ${table.definition.columns.length &&
-          table.definition.columns.map((column, i) => (
-            `<div class="field-container">
+        ${
+          table.definition.columns.length &&
+          table.definition.columns
+            .map(
+              (column, i) =>
+                `<div class="field-container">
               <div>
                 <b
                   class="field-option ${
@@ -29,7 +32,9 @@
               </div>
               <span class="white-text">${column.dataType}</span>
             </div>`
-          )).join("")}
+            )
+            .join("")
+        }
         <br />
       </div>
     </div>
