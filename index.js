@@ -2,7 +2,7 @@
   function renderTableCard(table) {
     const tablesContainer = document.getElementById('tables-container');
     const tableCard = `
-    <div class="table-container"  onclick="openNav(event)">
+    <div class="table-container" onclick="openNav(event)">
       <div class="table-header"></div>
       <div class="table-body">
         <h3 class="white-text table-heading">
