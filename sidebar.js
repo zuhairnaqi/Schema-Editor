@@ -1,6 +1,7 @@
 /* Set the width of the side navigation to 250px */
-function openNav() {
+function openNav($event) {
   document.getElementById("mySidenav").style.width = "50%";
+  $event.stopPropagation();
 }
 
 /* Set the width of the side navigation to 0 */
