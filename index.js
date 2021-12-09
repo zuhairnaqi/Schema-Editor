@@ -1,8 +1,8 @@
-(function() {
+(function () {
   function renderTableCard(table) {
-    const tablesContainer = document.getElementById('tables-container');
+    const tablesContainer = document.getElementById("tables-container");
+    const tableBody = document.createElement("div");
     const tableCard = `
-    <div class="table-container" onclick="openNav(event)">
       <div class="table-header"></div>
       <div class="table-body">
         <h3 class="white-text table-heading">
@@ -10,8 +10,8 @@
           <span class="table-subheading">(MODEL for ${table.tableName})</span>
         </h3>
         ${
-          table.definition.columns.length &&
-          table.definition.columns
+          table.columns.length &&
+          table.columns
             .map(
               (column, i) =>
                 `<div class="field-container">
@@ -37,9 +37,11 @@
         }
         <br />
       </div>
-    </div>
     `;
-    tablesContainer.innerHTML = tableCard;
+    tableBody.innerHTML = tableCard;
+    tableBody.setAttribute("class", "table-container");
+    tableBody.onclick = ($event) => openSchemaForm($event, table);
+    tablesContainer.appendChild(tableBody);
   }
-  renderTableCard(tablesData[0])
-})()
+  renderTableCard(tablesData[0]);
+})();

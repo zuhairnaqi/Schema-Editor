@@ -50,6 +50,7 @@
           placeholder="Enter Model Name"
           class="sidebarInput"
           type="text"
+          id="schema-form-name"
         /><br />
         <input class="checkbox1" type="checkbox" />
         <label class="checkboxText">Has Timestamps</label>
@@ -58,7 +59,7 @@
       </form>
       <h3 class="sidebarHeaderFields">Fields</h3>
       <form>
-        <div class="field-form-container">
+        <div id="field-form-container">
           <!-- <div class="field-row">
           <input
             class="sidebarFieldInput"
@@ -167,7 +168,11 @@
       <div class="main-container">
         <div class="navbar">
           <h4 class="navbar-heading">Schema Editor</h4>
-          <button type="button" class="btn btn-outline-success">
+          <button
+            type="button"
+            class="btn btn-outline-success"
+            onClick="openSchemaForm()"
+          >
             <i class="fa fa-plus-circle" aria-hidden="true"></i>
             Add Entity
           </button>
