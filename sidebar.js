@@ -15,11 +15,14 @@ function openSchemaForm($event, table) {
         (col) =>
           `
       <div class="field-row">
-        <input class="sidebarFieldInput" placeholder="Field Name" type="text" value="${col.name}" />
+        <input class="sidebarFieldInput" placeholder="Field Name" type="text" value="${
+          col.name
+        }" />
         <select class="sidebarFieldInput">
           <option>Choose Data</option>
-          <option>string</option>
-          <option>Boolean</option>
+          ${Object.entries(DATA_TYPES).map(
+            ([key, value]) => `<option value=${key}>${value}</option>`
+          )}
         </select>
         <label class="letterN">N</label>
         <i class="fa fa-gear" role="button" id="gear-button"></i>
@@ -39,6 +42,9 @@ function openSchemaForm($event, table) {
       <input class="sidebarFieldInput" placeholder="Field Name" type="text" />
       <select class="sidebarFieldInput">
         <option>Choose Data</option>
+        ${Object.entries(DATA_TYPES).map(
+          ([key, value]) => `<option value=${key}>${value}</option>`
+        )}
       </select>
       <label class="letterN">N</label>
       <i class="fa fa-gear" role="button" id="gear-button"></i>
@@ -68,6 +74,9 @@ const fieldCreator = (index) => {
       <input class="sidebarFieldInput" placeholder="Field Name" type="text" />
       <select class="sidebarFieldInput">
         <option>Choose Data</option>
+        ${Object.entries(DATA_TYPES).map(
+          ([key, value]) => `<option value=${key}>${value}</option>`
+        )}
       </select>
       <label class="letterN">N</label>
       <i class="fa fa-gear" role="button" id="gear-button"></i>
